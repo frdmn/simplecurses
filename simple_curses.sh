@@ -134,16 +134,16 @@ window(){
     #set title color
     case $color in
         green)
-            echo -n -e "\E[01;32m"
+            [[ "$OSTYPE" == "darwin"* ]] && printf "\E[01;32m" || echo -n -e "\E[01;32m"
             ;;
         red)
-            echo -n -e "\E[01;31m"
+            [[ "$OSTYPE" == "darwin"* ]] && printf "\E[01;31m" || echo -n -e "\E[01;31m"
             ;;
         blue)
-            echo -n -e "\E[01;34m"
+            [[ "$OSTYPE" == "darwin"* ]] && printf "\E[01;34m" || echo -n -e "\E[01;34m"
             ;;
         grey|*)
-            echo -n -e "\E[01;37m"
+            [[ "$OSTYPE" == "darwin"* ]] && printf "\E[01;37m" || echo -n -e "\E[01;37m"
             ;;
     esac
     
