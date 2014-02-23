@@ -1,3 +1,5 @@
+(Caution: I (@frdmn) forked this repo from [Google Code](https://code.google.com/p/bashsimplecurses/) and turned it into a git repo using `svn2git` to provide Mac OS X compatibility. None of this is text, including the wiki content and the README.md below, is written by myself.)
+
 ## The simple way
 
 "Bash simple curses" give you some basic functions to quickly create some windows on you terminal as Xterm, aterm, urxvt...
