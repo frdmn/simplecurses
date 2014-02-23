@@ -152,7 +152,7 @@ window(){
     tput rc
     tput cuf $((cols-1))
     echo -ne $_VLINE
-    echo -n -e "\e[00m"
+    [[ "$OSTYPE" == "darwin"* ]] && printf "\e[00m" || echo -n -e "\e[00m"
     _nl
     #then draw bottom line for title
     addsep
