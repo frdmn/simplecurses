@@ -20,7 +20,7 @@ So, we need an easy and usefull library to quickly create this kind of views. Th
 
 Bash bar is the given example that show system informations. You only have to resize your terminal window and place it on left or right. This screenshot is made on Xmonad:
 
-![](http://cl.ly/image/2F0X230t1V0w/content)
+![](http://i.imgur.com/RFNqFNN.png)
 
 this is the code used:
 
@@ -69,7 +69,7 @@ this is the code used:
 
 this capture shows you that you can do whatever you want:
 
-![](http://cl.ly/image/3t0x2A152Q16/content)
+![](http://imgur.com/pM1nzTn.png)
 
 Code is:
 
@@ -120,6 +120,8 @@ Code is:
 
 And just with libcaca "img2txt" command, you can have fun:
 
-![](http://cl.ly/image/1Z3P2C1E1a1I/content)
+![](http://i.imgur.com/0gNHg3l.png)
+
+(Note by frdmn: Couldn't get the `img2txt` working so I just ignored that...)
 
 Cool, isn't it ?
