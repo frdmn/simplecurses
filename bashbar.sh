@@ -24,7 +24,7 @@ main (){
 
     if [[ "$OSTYPE" == "darwin"* ]]
     then
-        # http://apple.stackexchange.com/questions/4286/is-there-a-mac-os-x-terminal-version-of-the-free-command-in-linux-systems/19107#19107
+        # http://apple.stackexchange.com/a/48195
         FREE_BLOCKS=$(vm_stat | grep free | awk '{ print $3 }' | sed 's/\.//')
         INACTIVE_BLOCKS=$(vm_stat | grep inactive | awk '{ print $3 }' | sed 's/\.//')
         SPECULATIVE_BLOCKS=$(vm_stat | grep speculative | awk '{ print $3 }' | sed 's/\.//')
@@ -33,9 +33,9 @@ main (){
         INACTIVE=$(($INACTIVE_BLOCKS*4096/1048576))
         TOTAL=$((($FREE+$INACTIVE)))
 
-        append_tabbed "Total: $TOTAL" 2
-        append_tabbed "Free: $FREE" 2
-        append_tabbed "Inactive: $INACTIVE" 2
+        append_tabbed "Total: $(sysctl hw.memsize | awk '{ print $2/1024/1024 }') MB" 2
+        append_tabbed "Free: $TOTAL MB" 2
+        append_tabbed "Inactive: $INACTIVE MB" 2
     else
         append_tabbed `cat /proc/meminfo | awk '/MemTotal/ {print "Total:" $2/1024}'` 2
         append_tabbed `cat /proc/meminfo | awk '/MemFree/ {print "Used:" $2/1024}'` 2
